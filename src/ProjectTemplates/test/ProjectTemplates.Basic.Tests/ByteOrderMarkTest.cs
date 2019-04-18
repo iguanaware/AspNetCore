@@ -1,4 +1,4 @@
-﻿// Copyright (c) .NET Foundation. All rights reserved.
+// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System.Collections.Generic;
@@ -24,9 +24,9 @@ namespace Templates.Test
         public void CheckForByteOrderMark_ForAllTemplates(string projectName)
         {
             var currentDirectory = Directory.GetCurrentDirectory();
-            var projectTemplateDir = Directory.GetParent(currentDirectory).Parent.Parent.Parent.FullName;
+            var projectTemplateDir = Directory.GetParent(currentDirectory).Parent.Parent.Parent.Parent.FullName;
             var path = Path.Combine(projectName, "content");
-            var directories = Directory.GetDirectories(Path.Combine(projectTemplateDir, path), "*Sharp");
+            var directories = Directory.GetDirectories(Path.Combine(projectTemplateDir, "src", path), "*Sharp");
 
             var filesWithBOMCharactersPresent = false;
             foreach (var directory in directories)

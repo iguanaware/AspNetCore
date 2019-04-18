@@ -43,7 +43,7 @@ namespace Templates.Test
         {
             get
             {
-                using (var stream = typeof(BaselineTest).Assembly.GetManifestResourceStream("ProjectTemplates.Tests.template-baselines.json"))
+                using (var stream = typeof(BaselineTest).Assembly.GetManifestResourceStream("ProjectTemplates.Basic.Tests.template-baselines.json"))
                 {
                     using (var jsonReader = new JsonTextReader(new StreamReader(stream)))
                     {
